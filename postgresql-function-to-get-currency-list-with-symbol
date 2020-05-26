@@ -1,0 +1,128 @@
+-- Create table variable
+CREATE SEQUENCE currency_seq;
+CREATE TABLE currency
+(
+  currency_id integer NOT NULL DEFAULT nextval('currency_seq'::regclass),
+  currency_code character varying(3) NOT NULL,
+  currency_name character varying(20) NOT NULL,
+  currency_symbol character varying(5) NOT NULL,
+  CONSTRAINT currency_pkey PRIMARY KEY (currency_id),
+  CONSTRAINT currency_currency_code_key UNIQUE (currency_code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+-- Insert currency records
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Leke', 'ALL', 'Lek');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'USD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Afghanis', 'AFN', '؋');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'ARS', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Guilders', 'AWG', 'ƒ');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'AUD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('New Manats', 'AZN', 'ман');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'BSD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'BBD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rubles', 'BYR', 'p.');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Euro', 'EUR', '€');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'BZD', 'BZ$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'BMD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Bolivianos', 'BOB', '$b');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Convertible Marka', 'BAM', 'KM');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pula', 'BWP', 'P');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Leva', 'BGN', 'лв');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Reais', 'BRL', 'R$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'GBP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'BND', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Riels', 'KHR', '៛');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'CAD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'KYD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'CLP', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Yuan Renminbi', 'CNY', '¥');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'COP', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Colón', 'CRC', '₡');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Kuna', 'HRK', 'kn');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'CUP', '₱');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Koruny', 'CZK', 'Kč');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Kroner', 'DKK', 'kr');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'DOP ', 'RD$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'XCD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'EGP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Colones', 'SVC', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'FKP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'FJD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Cedis', 'GHC', '¢');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'GIP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Quetzales', 'GTQ', 'Q');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'GGP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'GYD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Lempiras', 'HNL', 'L');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'HKD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Forint', 'HUF', 'Ft');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Kronur', 'ISK', 'kr');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupiahs', 'IDR', 'Rp');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rials', 'IRR', '﷼');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'IMP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('New Shekels', 'ILS', '₪');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'JMD', 'J$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Yen', 'JPY', '¥');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'JEP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Tenge', 'KZT', 'лв');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Won', 'KPW', '₩');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Won', 'KRW', '₩');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Soms', 'KGS', 'лв');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Kips', 'LAK', '₭');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Lati', 'LVL', 'Ls');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'LBP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'LRD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Switzerland Francs', 'CHF', 'CHF');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Litai', 'LTL', 'Lt');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Denars', 'MKD', 'ден');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Ringgits', 'MYR', 'RM');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'MUR', '₨');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'MXN', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Tugriks', 'MNT', '₮');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Meticais', 'MZN', 'MT');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'NAD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'NPR', '₨');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Guilders', 'ANG', 'ƒ');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'NZD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Cordobas', 'NIO', 'C$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Nairas', 'NGN', '₦');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Krone', 'NOK', 'kr');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rials', 'OMR', '﷼');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'PKR', '₨');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Balboa', 'PAB', 'B/.');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Guarani', 'PYG', 'Gs');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Nuevos Soles', 'PEN', 'S/.');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'PHP', 'Php');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Zlotych', 'PLN', 'zł');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rials', 'QAR', '﷼');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('New Lei', 'RON', 'lei');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rubles', 'RUB', 'руб');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'SHP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Riyals', 'SAR', '﷼');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dinars', 'RSD', 'Дин.');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'SCR', '₨');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'SGD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'SBD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Shillings', 'SOS', 'S');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rand', 'ZAR', 'R');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'LKR', '₨');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Kronor', 'SEK', 'kr');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'SRD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pounds', 'SYP', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('New Dollars', 'TWD', 'NT$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Baht', 'THB', '฿');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'TTD', 'TT$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Lira', 'TRY', '₺');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Liras', 'TRL', '£');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dollars', 'TVD', '$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Hryvnia', 'UAH', '₴');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Pesos', 'UYU', '$U');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Sums', 'UZS', 'лв');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Bolivares Fuertes', 'VEF', 'Bs');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Dong', 'VND', '₫');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rials', 'YER', '﷼');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Zimbabwe Dollars', 'ZWD', 'Z$');
+INSERT INTO currency (currency_name, currency_code, currency_symbol) VALUES ('Rupees', 'INR', '₹');
